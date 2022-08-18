@@ -43,7 +43,6 @@
                                                         <th>Menu</th>
                                                         <th>Sub Menu</th>
                                                         <th>Url</th>
-                                                        <th>Status Aktif</th>
                                                         <th>Action</th>
                                                     </tr>
                                                     @foreach ($program as $item)
@@ -52,25 +51,6 @@
                                                             <td>{{ $item->menu->nama }}</td>
                                                             <td>{{ $item->nama }}</td>
                                                             <td>{{ $item->url }}</td>
-                                                            <td>
-                                                                @if ($item->status_aktif == 1)
-                                                                    <label class="custom-switch ">
-                                                                        <input type="checkbox" class="custom-switch-input"
-                                                                            checked
-                                                                            onclick="status_aktif({{ $item->id }})">
-                                                                        <span class="custom-switch-indicator"></span>
-                                                                        <span class="custom-switch-description">ON</span>
-                                                                    </label>
-                                                                @else
-                                                                    <label class="custom-switch">
-                                                                        <input type="checkbox" class="custom-switch-input"
-                                                                            onclick="status_aktif({{ $item->id }})">
-                                                                        <span class="custom-switch-indicator"></span>
-                                                                        <span class="custom-switch-description">OFF</span>
-                                                                    </label>
-                                                                @endif
-
-                                                            </td>
                                                             <td>
                                                                 <a href="/{{ $url }}/{{ $item->slug }}/edit"
                                                                     class="btn btn-sm btn-warning btn-action mr-1"

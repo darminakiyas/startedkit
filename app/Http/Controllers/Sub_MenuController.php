@@ -54,7 +54,6 @@ class Sub_MenuController extends Controller
             'nama' => 'required|max:255|unique:sub_menus',
             'slug' => 'required|unique:sub_menus',
             'url' => 'required',
-            'status_aktif' => 'required',
         ]);
 
         Sub_menu::create($validateData);
@@ -102,7 +101,6 @@ class Sub_MenuController extends Controller
         $rules = [
             'menu_id' => 'required|max:255',
             'url' => 'required|max:255',
-            'status_aktif' => 'required|max:255',
         ];
         if ($request->nama != $sub_menu->nama) {
             $rules['nama'] = 'required|unique:sub_menus';
@@ -128,25 +126,6 @@ class Sub_MenuController extends Controller
         Sub_menu::destroy($sub_menu->id);
         return redirect('/konfigurasi/sub_menu')->with('success', 'Data sukses di hapus!');
     }
-
-    public function sub_menu_update_status_sukses()
-    {
-        return redirect('/konfigurasi/sub_menu')->with('success', 'Data Status Sukses Di Update');
-    }
-    public function sub_menu_update_status_aktif(Request $request)
-    {
-        $id = $request;
-        $sub_menu = Sub_menu::find($id)->first();
-
-        if ($sub_menu->status_aktif == 1) {
-            Sub_menu::where('id', $sub_menu->id)
-                ->update(['status_aktif' => 0]);
-        } else {
-            Sub_menu::where('id', $sub_menu->id)
-                ->update(['status_aktif' => 1]);
-        }
-    }
-
 
     public function checkSlug(Request $request)
     {

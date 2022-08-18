@@ -37,7 +37,8 @@ function menu_access($role_id, $menu_id)
 function sub_menu_access($role_id, $sub_menu_id)
 {
     $result = Access_menu::where('role_id', $role_id)
-        ->where('sub_menu_id', $sub_menu_id)->count();
+        ->where('sub_menu_id', $sub_menu_id)
+        ->count();
 
     if ($result <= 0) {
         return "hidden";

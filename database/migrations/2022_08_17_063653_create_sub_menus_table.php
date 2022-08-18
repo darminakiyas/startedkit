@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('nama')->unique();
             $table->string('slug')->unique();
             $table->string('url');
-            $table->integer('status_aktif');
             $table->timestamps();
         });
     }

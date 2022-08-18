@@ -37,8 +37,6 @@ Route::resource('/konfigurasi/menu', MenuController::class)->middleware('admin')
 
 //untuk Sub Menu
 Route::get('/konfigurasi/sub_menu/checkSlug', [Sub_MenuController::class, 'checkSlug'])->middleware('admin');
-Route::get('/sub_menu_update_status_sukses', [Sub_MenuController::class, 'sub_menu_update_status_sukses'])->middleware('admin');
-Route::get('/sub_menu_update_status_aktif', [Sub_MenuController::class, 'sub_menu_update_status_aktif'])->middleware('admin');
 Route::resource('/konfigurasi/sub_menu', Sub_MenuController::class)->middleware('admin');
 
 //untuk access menu harus diatas dari role karena resource

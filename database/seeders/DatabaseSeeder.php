@@ -54,35 +54,30 @@ class DatabaseSeeder extends Seeder
             'nama' => 'User',
             'slug' => 'user',
             'url' => 'konfigurasi/user',
-            'status_aktif' => 1,
         ]);
         Sub_menu::create([
             'menu_id' => 1,
             'nama' => 'Role',
             'slug' => 'role',
             'url' => 'konfigurasi/role',
-            'status_aktif' => 1,
         ]);
         Sub_menu::create([
             'menu_id' => 1,
             'nama' => 'Menu',
             'slug' => 'menu',
             'url' => 'konfigurasi/menu',
-            'status_aktif' => 1,
         ]);
         Sub_menu::create([
             'menu_id' => 1,
             'nama' => 'Sub Menu',
             'slug' => 'sub_menu',
             'url' => 'konfigurasi/sub_menu',
-            'status_aktif' => 1,
         ]);
         Sub_menu::create([
             'menu_id' => 2,
             'nama' => 'Agama',
             'slug' => 'agama',
             'url' => 'master/agama',
-            'status_aktif' => 1,
         ]);
 
         Role::create([

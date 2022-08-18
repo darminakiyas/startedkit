@@ -73,21 +73,6 @@
                                             @enderror
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Status Aktif</label>
-                                        <div class="col-sm-9">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline1" name="status_aktif"
-                                                    class="custom-control-input" value="1" checked>
-                                                <label class="custom-control-label" for="customRadioInline1">ON</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline2" name="status_aktif"
-                                                    class="custom-control-input" value="0">
-                                                <label class="custom-control-label" for="customRadioInline2">OFF</label>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="card-footer text-right">
                                         <button class="btn btn-primary">Simpan</button>
                                     </div>
